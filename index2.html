@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galeria de Vidros VR (Simulada)</title>
+    <meta charset="utf-8" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #111">
+      
+      <!-- Luz ambiente e direcional -->
+      <a-light type="ambient" color="#ffffff"></a-light>
+      <a-light type="directional" intensity="0.6" position="2 4 -3"></a-light>
+
+      <!-- Chão -->
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#444" shadow></a-plane>
+
+      <!-- "Vidros" simulados com transparência -->
+      <a-box position="-3 1.5 -5" depth="0.1" height="3" width="2"
+             color="#88c" opacity="0.3" transparent="true"></a-box>
+
+      <a-sphere position="0 1.5 -5" radius="1"
+                color="#8cf" opacity="0.2" transparent="true" metalness="0.1"></a-sphere>
+
+      <a-cylinder position="3 1.5 -5" radius="1" height="3"
+                  color="#aaf" opacity="0.3" transparent="true"></a-cylinder>
+
+      <!-- Câmera VR -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+    </a-scene>
+  </body>
+</html>
